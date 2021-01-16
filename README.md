@@ -20,7 +20,13 @@ Before executing the Loan Qualifier Application, ensure that the Fire, Questiona
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before executing the *Loan Qualifier Application*, ensure that the *Fire*, *Questionary* and *PyTest* modules are installed on your machine's *Python 3.7*+ development environment.
+
+```
+pip install fire
+pip install questionary
+pip install pytest
+```
 
 ---
 
