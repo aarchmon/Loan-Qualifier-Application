@@ -46,8 +46,8 @@ def save_csv(qualifying_loans):
     header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
 
     # Write qualifying_loans to a new .csv file named 'qualifying_loans.csv'.
-    print("Commencing data writing...")
-    with open("qualifying_loans.csv", "w", newline = "") as f:
+    print("\nCommencing data writing...")
+    with open("./data/output/qualifying_loans.csv", "w", newline = "") as f:
         csvwriter = csv.writer(f)
 
         # Write header to file.
