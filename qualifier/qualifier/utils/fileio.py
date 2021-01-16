@@ -28,3 +28,33 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+
+# Saves qualifying loans as a .csv file.
+def save_csv(qualifying_loans):
+    """
+    Saves qualifying loans per user information into a .csv file.
+
+    Args:
+        qualifying_loans (List): Qualifying loans in a List data structure.
+
+    Returns:
+        NONE
+    """
+
+    # Set the output header.
+    header = ["Lender", "Max Loan Amount", "Max LTV", "Max DTI", "Min Credit Score", "Interest Rate"]
+
+    # Write qualifying_loans to a new .csv file named 'qualifying_loans.csv'.
+    print("Commencing data writing...")
+    with open("qualifying_loans.csv", "w", newline = "") as f:
+        csvwriter = csv.writer(f)
+
+        # Write header to file.
+        csvwriter.writerow(header)
+
+        # Append all qualifying loans into the .csv file. 
+        for loan in qualifying_loans:
+            csvwriter.writerow(loan)
+    
+    print(".csv file successfully written! \n")

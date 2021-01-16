@@ -12,7 +12,10 @@ import fire
 import questionary
 from pathlib import Path
 
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import (
+    load_csv,
+    save_csv
+)
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -109,27 +112,15 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
-
-
-# Reads in .csv file from a provided path.
-def save_csv(csvpath):
-
-    # Write daily_rate_sheet.csv from the 'data' folder into a .csv file.
-    with open(csvpath, "r") as csvfile:
-        data = []
-        csvreader = csv.reader(csvfile, delimiter = ",")
-
-        # Skip the .csv header.
-        next(csvreader)
-
-        # Read in the .csv data.
-        for row in csvreader:
-            data.append(row)
     
-    # Return data.
-    return data
+    response = questionary.confirm("Would you like to save your loan data as a .csv file? ").ask()
+    if response:
+        save_csv(qualifying_loans)
+    else:
+        print("Thank you for using Microcredit Loans 2.0! ")
+    
+    # Exit the program.
+    sys.exit()
 
 
 def run():
@@ -149,6 +140,8 @@ def run():
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
 
+    # Save the qualifying loans into a .csv file.
+    #save_csv(qualifying_loans)
 
 if __name__ == "__main__":
     fire.Fire(run)
