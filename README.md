@@ -8,7 +8,13 @@ A command-line-interface application which determines available mortgage loans b
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+Before executing the Loan Qualifier Application, ensure that the Fire, Questionary and PyTest modules are installed on your machine's Python 3.7+ development environment.
+
+* [fire](https://google.github.io/python-fire/guide/) - CLI, entry point and help page.
+
+* [questionary](https://pypi.org/project/questionary/) - Interactive user input, dialogs, and control flow.
+
+* [PyTest](https://docs.pytest.org/en/latest/) - Unit testing framework.
 
 ---
 
