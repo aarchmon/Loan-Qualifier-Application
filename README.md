@@ -32,7 +32,9 @@ pip install pytest
 
 ## Examples
 
-This section should include screenshots, code blocks, or animations showing how your project works.
+![Program Execution Example](./images/example_1.png)
+
+![Output File Example](./images/example_2.png)
 
 ---
 
