@@ -21,3 +21,11 @@ Your qualifying loans are now available and you will be prompted with a message 
 ```
 
 ---
+
+## Examples
+
+![Program Execution Example](../images/example_1.png)
+
+![Output File Example](../images/example_2.png)
+
+---
