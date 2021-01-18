@@ -1,39 +1,23 @@
-# Project Title
+# Usage
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+Clone repository onto your personal machine and navigate to the `qualifier` directory via CLI. A *.py* file named `app.py` will be present. With *Python 3.7*+, run the following command in the CLI,
 
----
+```
+python app.py
+```
 
-## Technologies
+After launching the above command, you will be prompted to enter a path to a *.csv* file containing loan information from a selection of banks. This file in question is located in `/qualifier/data/daily_rate_sheet.csv`. When this prompt arises, enter in the following as the path input:
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+```
+./data/daily_rate_sheet.csv
+```
 
----
+ Next, you will be prompted to enter in a selection of financial information to determine any qualifying loans available to you. **All numerical data is assumed to be in U.S. Dollars (USD). Do not use commas or dollar signs when inputting data!**
 
-## Installation Guide
+Your qualifying loans are now available and you will be prompted with a message indicating the number of available loans from `daily_rate_sheet.csv`. Lastly, you will be given the option to save this information into a *.csv* format. If you choose to save your loan information, it will be stored in the following directory:
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
-
----
-
-## Examples
-
-This section should include screenshots, code blocks, or animations showing how your project works.
-
----
-
-## Usage
-
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+```
+/qualifier/data/output
+```
 
 ---
-
-## Contributors
-
-In this section, list all the people who contribute to this project; since you may want to be reached by recruiters or potential collaborators, include your contact e-mail, and optionally your LinkedIn or Twitter profile.
-
----
-
-## License
-
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify others what they can and can not do with your source code and files. Use this section to include the licence you want to use.
